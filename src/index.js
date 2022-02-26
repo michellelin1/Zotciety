@@ -9,6 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // page imports
 import { Prompts } from './pages/prompts/Prompts'
 import { Challenges } from './pages/challenges/Challenges'
+import { LeaderBoard } from './pages/leadershipboard/leadershipboard';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -17,6 +18,7 @@ ReactDOM.render(
         <Route path='/' element={<App />} />
         <Route path='/prompts' element={<Prompts />} />
         <Route path='/challenges' element={<Challenges />} />
+        <Route path='/leaderboard' element={<LeaderBoard />} />
       </Routes>
     </Router>
     {/* <App /> */}
