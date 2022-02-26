@@ -1,16 +1,25 @@
 import React from 'react';
 import './Home.css';
+import {Link} from "react-router-dom";
 
 
 export function Home() {
   function PromptButton() {
-    function handleClick() {
-      window.open("https://www.google.com");
-    }
     return (
-      <button className = "buttons ButtonFont" onClick={handleClick}>
-        ZotPrompts
-      </button>
+      <Link to="/prompts">
+        <button className = "buttons ButtonFont">
+          ZotPrompts
+        </button>
+      </Link>
+    );
+  }
+  function TrialButton() {
+    return (
+      <Link to="/challenges">
+        <button className = "buttons ButtonFont">
+          ZotTrials
+        </button>
+      </Link>
     );
   }
   return (
@@ -22,7 +31,7 @@ export function Home() {
             <PromptButton />
           </div>
           <div className = "col">
-            <button className = "buttons ButtonFont">ZotTrials</button>
+            <TrialButton />
           </div>
         </div>
       </div>
