@@ -3,10 +3,22 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+// page imports
+import { Prompts } from './pages/prompts/Prompts'
+import { Challenges } from './pages/challenges/Challenges'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Routes>
+        <Route path='/' element={<App />} />
+        <Route path='/prompts' element={<Prompts />} />
+        <Route path='/challenges' element={<Challenges />} />
+      </Routes>
+    </Router>
+    {/* <App /> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
