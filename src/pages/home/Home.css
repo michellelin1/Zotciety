@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+.TitleFont {
+
+    font-family: Concert One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 70px;
+    line-height: 47px;
+    text-align: center;
+
+    color: #000000;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* .background {
+    background-image: url("/public/cheering-anteaters.png");
+} */
+
+.ButtonFont {
+
+    font-family: Concert One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 47px;
+    text-align: center;
+
+    color: #000000;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.titleposition{
+    padding: 50px;
+}
+
+.position {
+    padding: 300px;
+}
+
+.buttons {
+    width: 276px;
+    height: 96px;
+
+    background: #BDFDCB;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+body {
+    background-color: #A2DAEA !important;
+    background-image: url("/public/cheering-anteaters.png");
+}
