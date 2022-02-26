@@ -5,7 +5,7 @@
     font-family: Concert One;
     font-style: normal;
     font-weight: normal;
-    font-size: 70px;
+    font-size: 100px;
     line-height: 47px;
     text-align: center;
 
@@ -37,7 +37,7 @@
 }
 
 .position {
-    padding: 300px;
+    padding-top: 400px;
 }
 
 .buttons {
@@ -45,13 +45,24 @@
     height: 96px;
 
     background: #BDFDCB;
-    border: 1px solid #000000;
+    border: 2px solid #000000;
     box-sizing: border-box;
     box-shadow: 0px 4px 4px 5px rgba(0, 0, 0, 0.25);
     border-radius: 40px;
 }
 
+.backgroundimage {
+    background-image: url("/public/cheering-anteaters.png");
+    /* background-size: 1400px;
+    background-position-x: 50px;
+    background-position-y: -150px; */
+    position: absolute;
+    width: 1300px;
+    height: 750px;
+    left: 120px;
+    top: 100px;
+}
+
 body {
     background-color: #A2DAEA !important;
-    /* background-image: url("/public/cheering-anteaters.png"); */
 }
