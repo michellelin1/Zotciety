@@ -2,6 +2,7 @@ import { React, useState } from "react";
 import './Challenges.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from "react-router-dom";
+import ActivityCard from "../../components/activityCard/ActivityCard";
 
 function randomChallenges(challenges){
 	let result = []
@@ -85,6 +86,7 @@ export function Challenges() {
 				<button type="button" className="btn btn-lg home-btn">Home</button>
 			</Link>
 			{listChallenges}
+			{/* <button className="btn refresh-btn">hi</button> */}
 			<center><button type="button" className="btn refresh-btn" onClick={() => newChallenges()}>Generate New Trials</button></center>
     </div>
     );
