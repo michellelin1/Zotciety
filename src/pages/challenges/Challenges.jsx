@@ -9,7 +9,7 @@ import {query, where, collection, getDocs } from 'firebase/firestore'
 async function randomChallenges() {
 	let result = []
 	for(let i=0; i<3; i++) {
-		const index = Math.floor(Math.random() * 4)
+		const index = Math.floor(Math.random() * 5);
 		const q = query(collection(db, "Challenges", "Level"+(i+1), "Activites"), where("id", "==", index));
 		const querySnapshot = await getDocs(q);
 		querySnapshot.forEach((doc) => {

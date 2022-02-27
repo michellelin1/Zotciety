@@ -14,7 +14,7 @@ export default function ActivityCard({ pr, d, po, type }) {
 
   async function randomActivity() {
     let result;
-    const index = Math.floor(Math.random() * 4);
+    const index = Math.floor(Math.random() * 5);
     let a = "Activities";
     if (type === "Challenges") {
       a = "Activites";
