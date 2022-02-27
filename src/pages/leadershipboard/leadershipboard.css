@@ -92,6 +92,9 @@
     border-radius: 10px;
     background-color: #F5B60788;
     height: 15%;
+    animation: tada;
+    animation-duration: 2s;
+    animation-iteration-count: 5;
 }
 
 .first.pillar {
@@ -104,6 +107,9 @@
     border-radius: 10px;
     background-color: #FADD9B88;
     top:20%;
+    animation: tada;
+    animation-duration: 2s;
+    animation-iteration-count: 5;
 }
 
 .second.toppillar {
@@ -120,6 +126,9 @@
     border-radius: 10px;
     background-color: #FADD9B88;
     top: 30%;
+    animation: tada;
+    animation-duration: 2s;
+    animation-iteration-count: 5;
 }
 .third.pillar {
     border-radius: 10px;

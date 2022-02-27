@@ -51,6 +51,11 @@
     border-radius: 40px;
 }
 
+.buttons:hover {
+    animation: bounce;
+    animation-duration: 2s;
+}
+
 .backgroundimage {
     background-image: url("/public/cheering-anteaters.png");
     /* background-size: 1400px;
