@@ -31,7 +31,7 @@ export function CreateUser(props) {
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
+          Create Account
         </Modal.Title>
       </Modal.Header>
 			<form className="form-group" onSubmit={addUser}>
