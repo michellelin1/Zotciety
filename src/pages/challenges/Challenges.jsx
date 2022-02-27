@@ -97,7 +97,7 @@ export function Challenges() {
 		// <div>
 		// 	{challenge.challenge}
 		// </div>
-		<ActivityCard pr={challenge.challenge} d={challenge.description} po={challenge.points} />
+		<ActivityCard pr={challenge.challenge} d={challenge.description} po={challenge.points} type={"Challenges"} />
 	);
 
   return (
