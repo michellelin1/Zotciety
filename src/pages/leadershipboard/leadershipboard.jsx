@@ -10,7 +10,8 @@ export function LeaderBoard() {
     const querySnapshot = await getDocs(q);
     const top = [];
     querySnapshot.forEach((doc) => {
-      top.push(doc.id);
+
+      top.push(doc.data().userName);
     });
     // console.log(top);
     return top
@@ -20,10 +21,7 @@ export function LeaderBoard() {
   useEffect(async () => {
     setTop(await getTops())
   }, []);
-  // const top = getTops()
-  // const first_place = top[0]
-  // const second_place = top[1]
-  // const third_place = top[2]
+
   return (
     <div>
       <div className = 'mainheader'>

@@ -38,7 +38,7 @@ export function Challenges() {
 
 	console.log(currChallenges)
 	const listChallenges = currChallenges.map(challenge =>
-		<ActivityCard pr={challenge.challenge} d={challenge.description} po={challenge.points} type={"Challenges"} />
+		<ActivityCard key={challenge.challenge} pr={challenge.challenge} d={challenge.description} po={challenge.points} type={"Challenges"} />
 	);
 
   return (

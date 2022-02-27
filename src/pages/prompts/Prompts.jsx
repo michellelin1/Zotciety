@@ -37,7 +37,7 @@ export function Prompts() {
 	}
 
 	const listPrompts = currPrompts.map(prompt =>
-		<ActivityCard pr={prompt.prompt} d={prompt.description} po={prompt.points} type={"Prompts"}/>
+		<ActivityCard key={prompt.prompt} pr={prompt.prompt} d={prompt.description} po={prompt.points} type={"Prompts"}/>
 	);
 
   return (

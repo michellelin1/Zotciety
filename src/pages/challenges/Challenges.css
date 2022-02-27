@@ -13,15 +13,16 @@
 } */
 
 .home-btn {
-    background-color: #BDFDCB !important;
-    border-color: black !important;
-    font-family: 'Concert One';
-    font-size: 30px;
-    float: right;
-    margin-top: -70px;
-    margin-right: 30px;
-    border-width: 2px;
+    background-color: #BDFDCB;
+    border-color: black;
+    border-width: 4px;
     border-radius: 15px;
+    font-family: 'Concert One';
+    font-size: 30px; 
+    position: absolute;
+    width: 150px;
+    right: 24px;
+    top: 21px;
 }
 
 .refresh-btn {

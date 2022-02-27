@@ -1,21 +1,11 @@
 import React from 'react';
 import './Home.css';
 import {Link} from "react-router-dom";
-import db from '../../firebase';
-import { collection, getDocs, addDoc, deleteDoc, serverTimestamp} from "firebase/firestore"; 
+import { CreateUser } from '../../components/createUser/createUser';
 
 export function Home() {
-  async function addUser(){
-    try {
-      const docRef = await addDoc(collection(db, "UserData"), {
-        points: 0,
-        timestamp: serverTimestamp()
-      });
-      console.log("Document written with ID: ", docRef.id);
-    } catch (e) {
-      console.error("Error adding document: ", e);
-    }
-  }
+  const [modalShow, setModalShow] = React.useState(false);
+
   function PromptButton() {
     return (
       <Link to="/prompts">
@@ -38,14 +28,14 @@ export function Home() {
     return (
       <Link to="/leaderboard">
         <button className = "buttons ButtonFont">
-          Zotboard
+          ZotBoard
         </button>
       </Link>
     );
   }
   function LogInButton() {
     return (
-      <button onClick = {addUser} className = "buttons ButtonFont">
+      <button onClick ={() => setModalShow(true)} className = "buttons ButtonFont">
         Create User
       </button>
     );
@@ -73,6 +63,10 @@ export function Home() {
           </div>
         </div>
       </div>
+      <CreateUser 
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
     </div>
     );
 }
