@@ -19,7 +19,7 @@ export default function ActivityCard({ pr, d, po, type }) {
     if (type === "Challenges") {
       a = "Activites";
     }
-    console.log(type);
+    // console.log(type);
     const q = query(
       collection(db, type, "Level" + po, a),
       where("id", "==", index)
@@ -27,14 +27,14 @@ export default function ActivityCard({ pr, d, po, type }) {
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {
       let data = doc.data();
-      console.log(data);
+      // console.log(data);
       result = {
         challenge: data.question,
         description: data.description,
         points: po,
       };
     });
-    console.log(result);
+    // console.log(result);
     return result;
   }
 
@@ -52,7 +52,7 @@ export default function ActivityCard({ pr, d, po, type }) {
         result = doc.data();
         curr_id = doc.id;
       });
-      console.log(curr_id);
+      // console.log(curr_id);
       const temp = doc(db, "UserData", curr_id);
       await updateDoc(temp, {
         points: increment(po),
