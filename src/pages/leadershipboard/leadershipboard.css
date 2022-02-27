@@ -2,28 +2,27 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    padding: 2em;
-    margin: 3em 2em;
+    padding: 0.5em;
+    margin: 2em 3em;
 
 }
 
 .title {
     font-family: 'Concert One';
     text-align: center;
-    font-size: 80px;
-
+    font-size: 90px;
 }
 
 .leftimage {
-    width: 192px;
-    height: 160px;
+    width: 240px;
+    height: 200px;
     top: 10px;
     right: 1200px;
 }
 
 .rightimage {
-    width: 192px;
-    height: 160px;
+    width: 240px;
+    height: 200px;
     top: 10px;
     right: 300px;
 }
@@ -65,14 +64,6 @@
     bottom: 0;
 }
 
-.toppillar {
-    width: 100%;
-    margin: 0;
-    position: absolute;
-    top: 1;
-    background-color: transparent;
-}
-
 .name {
     width: 100%;
     margin: 0;
@@ -84,6 +75,7 @@
 }
 
 .award {
+    padding: 0.5em;
     height: 25%
 }
 
@@ -98,8 +90,7 @@
 
 .first.name {
     border-radius: 10px;
-    background-color: #F5B607dd;
-    opacity: 0.5;
+    background-color: #F5B60788;
     height: 15%;
 }
 
@@ -111,8 +102,7 @@
 
 .second.name {
     border-radius: 10px;
-    background-color: #FADD9Bdd;
-    opacity: 0.5;
+    background-color: #FADD9B88;
     top:20%;
 }
 
@@ -128,12 +118,24 @@
 
 .third.name {
     border-radius: 10px;
-    background-color: #FADD9Bdd;
-    opacity: 0.5;
+    background-color: #FADD9B88;
     top: 30%;
 }
 .third.pillar {
     border-radius: 10px;
     background-color: #FADD9B;
     height: 50%;
+}
+
+.congrats {
+    font-family: 'Concert One';
+    text-align: center;
+    font-size: 50px;
+    background-color: #BDFDCB;
+    border-color: black;
+    border-width: 4px;
+    border-radius: 15px;
+    border-width: 4px;
+    margin: 20px 35px;
+    padding: 20px;
 }
