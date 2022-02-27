@@ -10,8 +10,12 @@ export function LeaderBoard() {
     <div>
       <div className = 'mainheader'>
         <img src="https://tinyurl.com/43hx3ez9" className = 'leftimage'/>
-        <h1 className="title">Leaderboard!</h1>
+        <center>
+          <h1 className="title">ZotBoard!</h1>
+        </center>
         <img src="https://tinyurl.com/43hx3ez9" className = 'rightimage'/>
+      </div>
+      <div>
         <Link to="/">
           <button type='button' className = 'homebutton btn btn-lg'>Home</button>
         </Link>
@@ -40,6 +44,7 @@ export function LeaderBoard() {
               </div>
             </div>
           </div>
+          <button className="congrats">Congratulations! You have successfully assimilated into Zotciety!</button>
       </center>
     </div>
     );
