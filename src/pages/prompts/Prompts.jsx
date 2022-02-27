@@ -1,5 +1,6 @@
 import { React, useState } from "react";
 import ActivityCard from "../../components/activityCard/ActivityCard"
+import './Prompts.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from "react-router-dom";
 
@@ -67,26 +68,21 @@ export function Prompts() {
 
 
 	function newPrompts() {
-		setCurrPrompts(randomPrompts([prompts]))
+		setCurrPrompts(randomPrompts(prompts))
 	}
 
 	const listPrompts = currPrompts.map(prompt =>
-		<div key={prompt.prompt}>
-			<p>{prompt.prompt}</p>
-			<p>{prompt.description}</p>
-			<p>{prompt.points}</p>
-		</div>
+		<ActivityCard pr={prompt.prompt} d={prompt.description} po={prompt.points} />
 	);
 
   return (
-    <div>
+    <div class="promptBackground">
 			<h1 className="title">ZotPrompts</h1>
 			<Link to="/">
 				<button type="button" className="btn btn-lg home-btn">Home</button>
 			</Link>
 			{listPrompts}
-      <ActivityCard />
-			<center><button type="button" className="btn refresh-btn" onClick={() => newPrompts()}>Generate New Trials</button></center>
+			<center><button type="button" className="btn refresh-btn mb-5" onClick={() => newPrompts()}>Generate New Prompts</button></center>
     </div>
     );
 }
