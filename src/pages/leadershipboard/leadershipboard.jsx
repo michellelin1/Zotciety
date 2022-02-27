@@ -1,11 +1,26 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import './leadershipboard.css';
+import db from "./../../firebase";
+import { query, limit, doc, collection, updateDoc, getDocs, increment, orderBy } from "firebase/firestore";
 
 export function LeaderBoard() {
-  const first_place = 'name1'
-  const second_place = 'name2'
-  const third_place = 'name3'
+  async function getTops() {
+    let result;
+    let curr_id;
+    const q = query(collection(db, "UserData"), orderBy("points"), limit(3));
+    const querySnapshot = await getDocs(q);
+    const top = [];
+    querySnapshot.forEach((doc) => {
+      top.push(doc.id);
+    });
+    console.log(top);
+    return top
+  }
+  const top = getTops()
+  const first_place = top[0]
+  const second_place = top[1]
+  const third_place = top[2]
   return (
     <div>
       <div className = 'mainheader'>
