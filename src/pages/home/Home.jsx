@@ -2,14 +2,14 @@ import React from 'react';
 import './Home.css';
 import {Link} from "react-router-dom";
 import db from '../../firebase';
-import { collection, getDocs, addDoc } from "firebase/firestore"; 
-
+import { collection, getDocs, addDoc, deleteDoc, serverTimestamp} from "firebase/firestore"; 
 
 export function Home() {
   async function addUser(){
     try {
       const docRef = await addDoc(collection(db, "UserData"), {
-        points: 0
+        points: 0,
+        timestamp: serverTimestamp()
       });
       console.log("Document written with ID: ", docRef.id);
     } catch (e) {
