@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import "./ActivityCard.css"
 import db from './../../firebase';
 import {query, where, collection, getDocs } from 'firebase/firestore'
@@ -14,6 +14,11 @@ export default function ActivityCard({pr, d, po, type}) {
   // let questions = prompts
   // const [completed, setCompleted] = useState(Math.floor(Math.random()*questions[point].length))
 
+  useEffect(() => {
+    setPrompt(pr)
+    setDescription(d)
+  }, [pr, d])
+  
   async function randomActivity() {
     let result;
 		const index = Math.floor(Math.random() * 4)
