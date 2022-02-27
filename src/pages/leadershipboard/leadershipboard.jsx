@@ -10,7 +10,7 @@ export function LeaderBoard() {
     <div>
       <div className = 'mainheader'>
         <img src="https://tinyurl.com/43hx3ez9" className = 'leftimage'/>
-        <h1 className="title">Leadership Board!</h1>
+        <h1 className="title">Leaderboard!</h1>
         <img src="https://tinyurl.com/43hx3ez9" className = 'rightimage'/>
         <Link to="/">
           <button type='button' className = 'homebutton btn btn-lg'>Home</button>
